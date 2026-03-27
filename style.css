@@ -100,25 +100,6 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
     all: unset;
   }
 }
-@media (max-width: 768px) {
-  body {
-    font-family: system-ui, Arial, sans-serif;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    background-image: none !important;
-  }
-}
-button, a {
-  touch-action: manipulation;
-}
 /* BUTTONS */
 .btn-red {
   display: inline-flex; align-items: center; gap: 8px;
