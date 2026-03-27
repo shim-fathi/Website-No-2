@@ -696,7 +696,17 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
 .map-wrap { border-radius: var(--radius); overflow: hidden; border: var(--border); }
 .map-wrap iframe { display: block; }
 
-
+.hours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 16px; }
+.hr-card {
+  background: var(--blue-mid);
+  border: var(--border); border-radius: var(--radius);
+  padding: 28px 22px; text-align: center; transition: var(--transition);
+}
+.hr-card:hover { border-color: rgba(193,18,31,0.35); transform: translateY(-3px); }
+.hr-card.featured { border-color: var(--red); background: var(--blue-light); }
+.hr-icon { font-size: 2rem; margin-bottom: 12px; }
+.hr-card h3 { font-size: 1rem; margin-bottom: 8px; }
+.hr-card p { color: var(--text-dim); font-size: 0.87rem; line-height: 1.7; }
 
 .emergency-box {
   background: var(--red);
