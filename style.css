@@ -268,7 +268,7 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
 /* HERO */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex; align-items: center;
   overflow: hidden;
 }
@@ -822,4 +822,34 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
   .services-grid { grid-template-columns: 1fr; }
   .counters-row { grid-template-columns: 1fr 1fr; }
   .price-cards { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+}
+
+/* MOBILE PERFORMANCE OPTIMIZATION */
+@media (max-width: 768px) {
+
+  /* Disable heavy effects */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Remove shadows */
+  .card, .btn, .hero {
+    box-shadow: none !important;
+  }
+
+  /* Simplify layout */
+  .grid, .row {
+    display: block !important;
+  }
+
+  /* Reduce spacing */
+  .container {
+    padding: 10px !important;
+  }
+
+  /* Remove background images */
+  .hero {
+    background-image: none !important;
+  }
 }
