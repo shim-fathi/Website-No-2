@@ -45,7 +45,10 @@ ul { list-style: none; }
 
 .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 88px 0; }
-
+.light-section { background: var(--off-white); color: var(--blue-deep); }
+.light-section h2, .light-section h3, .light-section strong { color: var(--blue-deep); }
+.light-section p, .light-section li { color: #3a4a5c; }
+.light-section .section-tag { color: var(--red); border-color: var(--red); }
 
 /* TYPOGRAPHY */
 h1 { font-family: var(--font-display); font-size: clamp(2.1rem,5vw,3.9rem); font-weight: 900; line-height: 1.12; }
@@ -70,36 +73,6 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
 .section-header p { color: var(--text-dim); font-size: 1.02rem; }
 .light-section .section-header p { color: #4a5f72; }
 
-
-
-@media (max-width: 768px) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .hero,
-  .card,
-  .btn {
-    box-shadow: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .gallery,
-  .extra-section {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .grid {
-    display: block;
-  }
-}
-@media (hover: none) {
-  *:hover {
-    all: unset;
-  }
-}
 /* BUTTONS */
 .btn-red {
   display: inline-flex; align-items: center; gap: 8px;
@@ -268,7 +241,7 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
 /* HERO */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden;
 }
@@ -822,34 +795,4 @@ h3 { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.45rem); fon
   .services-grid { grid-template-columns: 1fr; }
   .counters-row { grid-template-columns: 1fr 1fr; }
   .price-cards { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
-}
-
-/* MOBILE PERFORMANCE OPTIMIZATION */
-@media (max-width: 768px) {
-
-  /* Disable heavy effects */
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  /* Remove shadows */
-  .card, .btn, .hero {
-    box-shadow: none !important;
-  }
-
-  /* Simplify layout */
-  .grid, .row {
-    display: block !important;
-  }
-
-  /* Reduce spacing */
-  .container {
-    padding: 10px !important;
-  }
-
-  /* Remove background images */
-  .hero {
-    background-image: none !important;
-  }
 }
