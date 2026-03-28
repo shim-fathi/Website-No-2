@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow unnecessary folders
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://shim-fathi.github.io/Website-No-2/sitemap.xml
